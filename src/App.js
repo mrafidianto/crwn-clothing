@@ -12,6 +12,7 @@ import SignInAndSignUp from './pages/sign-in-and-sign-out/sign-in-and-sign-out.c
 import CheckoutPage from '../src/pages/checkout/checkout.component';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.util';
+
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selector';
 
