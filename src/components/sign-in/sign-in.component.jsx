@@ -1,8 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import './sign-in.styles.scss';
-
+import {
+  SignInContainer,
+  SignIntitle,
+  ButtonsBarContainer,
+} from './sign-in.styles';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
@@ -40,8 +43,8 @@ class SignIn extends React.Component {
     const { googleSignInStart } = this.props;
 
     return (
-      <div className="sign-in">
-        <h2 className="title">I Already have an account</h2>
+      <SignInContainer>
+        <SignIntitle>I Already have an account</SignIntitle>
         <span>Sign in with our email and password</span>
 
         <form onSubmit={this.handleSubmit}>
@@ -62,7 +65,7 @@ class SignIn extends React.Component {
             required
           />
 
-          <div className="buttons">
+          <ButtonsBarContainer>
             <CustomButton type="submit">SIGN IN</CustomButton>
             <CustomButton
               type="button"
@@ -71,9 +74,9 @@ class SignIn extends React.Component {
             >
               SIGN IN WITH GOOGLE
             </CustomButton>
-          </div>
+          </ButtonsBarContainer>
         </form>
-      </div>
+      </SignInContainer>
     );
   }
 }
