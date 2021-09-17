@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": "10.24.1",
-    "npm": "7.18.1"
+    "yarn": "1.22.5"
   },
   "scripts": {
     "client": "cd client && yarn start",
@@ -11,7 +11,7 @@
     "build": "cd client && npm run build",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd client && yarn install && yarn install --production=false && yarn build"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
